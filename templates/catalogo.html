@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<section class="seccion">
+  <h2>Catálogo de Cartas</h2>
+
+  <!-- Lista de cartas estáticas (en un proyecto real vendrían de la BD) -->
+  <div class="grid">
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv3pt5/28_hires.png" alt="Pikachu">
+      <h3>Pikachu ex</h3>
+      <p class="precio">S/ 45.00</p>
+      <a href="{{ url_for('agregar', nombre='Pikachu ex', precio=45) }}" class="btn">+ Agregar</a>
+    </div>
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv1/6_hires.png" alt="Charizard">
+      <h3>Charizard ex</h3>
+      <p class="precio">S/ 120.00</p>
+      <a href="{{ url_for('agregar', nombre='Charizard ex', precio=120) }}" class="btn">+ Agregar</a>
+    </div>
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv2/52_hires.png" alt="Mewtwo">
+      <h3>Mewtwo ex</h3>
+      <p class="precio">S/ 80.00</p>
+      <a href="{{ url_for('agregar', nombre='Mewtwo ex', precio=80) }}" class="btn">+ Agregar</a>
+    </div>
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv3/91_hires.png" alt="Gardevoir">
+      <h3>Gardevoir ex</h3>
+      <p class="precio">S/ 60.00</p>
+      <a href="{{ url_for('agregar', nombre='Gardevoir ex', precio=60) }}" class="btn">+ Agregar</a>
+    </div>
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv4/55_hires.png" alt="Lucario">
+      <h3>Lucario ex</h3>
+      <p class="precio">S/ 35.00</p>
+      <a href="{{ url_for('agregar', nombre='Lucario ex', precio=35) }}" class="btn">+ Agregar</a>
+    </div>
+
+    <div class="carta">
+      <img src="https://images.pokemontcg.io/sv5/25_hires.png" alt="Eevee">
+      <h3>Eevee ex</h3>
+      <p class="precio">S/ 50.00</p>
+      <a href="{{ url_for('agregar', nombre='Eevee ex', precio=50) }}" class="btn">+ Agregar</a>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

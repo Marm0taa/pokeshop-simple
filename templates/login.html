@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<section class="form-seccion">
+  <div class="form-caja">
+    <h2>Iniciar sesión</h2>
+
+    <form method="POST">
+      <label>Usuario</label>
+      <input type="text" name="usuario" placeholder="Tu usuario" required>
+
+      <label>Contraseña</label>
+      <input type="password" name="password" placeholder="Tu contraseña" required>
+
+      <button type="submit" class="btn">Entrar →</button>
+    </form>
+
+    <p>¿No tienes cuenta? <a href="{{ url_for('registro') }}">Regístrate</a></p>
+  </div>
+</section>
+
+{% endblock %}

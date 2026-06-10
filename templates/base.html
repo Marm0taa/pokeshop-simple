@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PokéShop TCG</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="{{ url_for('inicio') }}" class="logo">⚡ PokéShop</a>
+    <div class="nav-links">
+      <a href="{{ url_for('catalogo') }}">Catálogo</a>
+      <a href="{{ url_for('carrito') }}">🛒 Carrito</a>
+
+      {% if usuario %}
+        <!-- Si hay sesión activa, mostramos el usuario y botón salir -->
+        <span class="bienvenido">👤 {{ usuario }}</span>
+        <a href="{{ url_for('logout') }}" class="btn-nav">Salir</a>
+      {% else %}
+        <!-- Si no hay sesión, mostramos login y registro -->
+        <a href="{{ url_for('login') }}" class="btn-nav">Iniciar sesión</a>
+        <a href="{{ url_for('registro') }}" class="btn-nav amarillo">Registrarse</a>
+      {% endif %}
+    </div>
+  </nav>
+
+  <!-- MENSAJES FLASH (avisos de éxito o error) -->
+  {% with mensajes = get_flashed_messages(with_categories=true) %}
+    {% if mensajes %}
+      {% for tipo, msg in mensajes %}
+        <div class="flash {{ tipo }}">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <!-- CONTENIDO DE CADA PÁGINA -->
+  <main>
+    {% block contenido %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>⚡ PokéShop TCG — Proyecto Final</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ── Variables de color ──────────────────── */
+:root {
+  --fondo:    #0a0a0f;
+  --tarjeta:  #13131a;
+  --borde:    #2a2a3a;
+  --texto:    #e8e8f0;
+  --gris:     #7a7a99;
+  --amarillo: #FFD700;
+  --rojo:     #e05252;
+}
+
+/* ── Reset básico ────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+}
+a { color: var(--amarillo); text-decoration: none; }
+
+/* ── Navbar ──────────────────────────────── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #111;
+  border-bottom: 1px solid var(--borde);
+}
+.logo { font-size: 1.4rem; font-weight: bold; color: var(--texto); }
+.nav-links { display: flex; gap: 16px; align-items: center; }
+.bienvenido { color: var(--amarillo); font-size: .9rem; }
+.btn-nav {
+  padding: 7px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  color: var(--texto);
+  font-size: .85rem;
+}
+.btn-nav.amarillo { background: var(--amarillo); color: #000; border: none; font-weight: bold; }
+
+/* ── Mensajes flash ──────────────────────── */
+.flash {
+  padding: 12px 32px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+.flash.ok    { background: rgba(74,200,100,.15); color: #6fdd8a; }
+.flash.error { background: rgba(224,82,82,.15);  color: var(--rojo); }
+
+/* ── Hero ────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 100px 32px;
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 16px; line-height: 1.1; }
+.hero p  { color: var(--gris); margin-bottom: 32px; font-size: 1.1rem; }
+.amarillo { color: var(--amarillo); }
+
+/* ── Botón general ───────────────────────── */
+.btn {
+  display: inline-block;
+  background: var(--amarillo);
+  color: #000;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: .9rem;
+}
+.btn.rojo { background: var(--rojo); color: #fff; }
+
+/* ── Sección general ─────────────────────── */
+.seccion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+.seccion h2 { font-size: 2rem; margin-bottom: 32px; }
+
+/* ── Grid de cartas ──────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.carta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.carta img  { width: 100%; border-radius: 6px; margin-bottom: 12px; }
+.carta h3   { font-size: .95rem; margin-bottom: 8px; }
+.precio     { color: var(--amarillo); font-weight: bold; margin-bottom: 12px; }
+
+/* ── Formularios ─────────────────────────── */
+.form-seccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 32px;
+}
+.form-caja {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+.form-caja h2  { margin-bottom: 24px; font-size: 1.6rem; }
+.form-caja p   { margin-top: 20px; color: var(--gris); font-size: .9rem; }
+.form-caja label {
+  display: block;
+  font-size: .85rem;
+  color: var(--gris);
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.form-caja input {
+  width: 100%;
+  background: #0a0a0f;
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: .9rem;
+}
+.form-caja .btn { width: 100%; margin-top: 24px; text-align: center; }
+
+/* ── Carrito ─────────────────────────────── */
+.tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+.tabla-carrito th, .tabla-carrito td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+}
+.tabla-carrito th { color: var(--gris); font-size: .85rem; }
+.total  { font-size: 1.2rem; margin-bottom: 20px; }
+.vacio  { color: var(--gris); font-size: 1rem; }
+
+/* ── Footer ──────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--borde);
+  color: var(--gris);
+  font-size: .85rem;
+  margin-top: 40px;
+}

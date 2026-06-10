@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<section class="form-seccion">
+  <div class="form-caja">
+    <h2>Crear cuenta</h2>
+
+    <!-- El formulario envía los datos a la misma ruta con POST -->
+    <form method="POST">
+      <label>Usuario</label>
+      <input type="text" name="usuario" placeholder="Ej: AshKetchum" required>
+
+      <label>Correo</label>
+      <input type="email" name="email" placeholder="tu@correo.com" required>
+
+      <label>Contraseña</label>
+      <input type="password" name="password" placeholder="Mínimo 6 caracteres" required>
+
+      <button type="submit" class="btn">Crear cuenta →</button>
+    </form>
+
+    <p>¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión</a></p>
+  </div>
+</section>
+
+{% endblock %}
