@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<section class="seccion">
+  <h2>Servicios de Gradeado</h2>
+  <p class="subtitulo">Protege y certifica el valor de tus cartas con los mejores servicios del mercado.</p>
+
+  <!-- QUÉ ES EL GRADEADO -->
+  <div class="info-box">
+    <h3>¿Qué es el gradeado?</h3>
+    <p>El gradeado es un proceso donde expertos evalúan el estado de tu carta y le asignan una nota del 1 al 10. Una carta gradeada vale mucho más y está protegida para siempre en un estuche rígido sellado.</p>
+  </div>
+
+  <!-- SERVICIOS DISPONIBLES -->
+  <div class="grid-servicios">
+
+    <div class="servicio-card">
+      <div class="servicio-logo">PSA</div>
+      <h3>PSA Grading</h3>
+      <p class="servicio-desc">El servicio de gradeado más reconocido del mundo. Ideal para cartas de alto valor.</p>
+      <ul class="servicio-lista">
+        <li>✅ Escala del 1 al 10</li>
+        <li>✅ Estuche sellado con holograma</li>
+        <li>✅ Verificación online</li>
+        <li>✅ Mayor valor en reventa</li>
+      </ul>
+      <div class="servicio-precio">Desde S/ 150 por carta</div>
+      <a href="#contacto" class="btn">Solicitar →</a>
+    </div>
+
+    <div class="servicio-card destacado">
+      <div class="badge-top">⭐ Más popular</div>
+      <div class="servicio-logo bgs">BGS</div>
+      <h3>BGS Beckett</h3>
+      <p class="servicio-desc">Beckett es conocido por sus subgrades: centering, bordes, esquinas y superficie.</p>
+      <ul class="servicio-lista">
+        <li>✅ 4 subgrades detallados</li>
+        <li>✅ Escala hasta 10 (Pristine)</li>
+        <li>✅ Muy valorado por coleccionistas</li>
+        <li>✅ Estuche negro premium</li>
+      </ul>
+      <div class="servicio-precio">Desde S/ 120 por carta</div>
+      <a href="#contacto" class="btn">Solicitar →</a>
+    </div>
+
+    <div class="servicio-card">
+      <div class="servicio-logo cgc">CGC</div>
+      <h3>CGC Cards</h3>
+      <p class="servicio-desc">Opción más económica con tiempos de entrega más rápidos. Perfecta para empezar.</p>
+      <ul class="servicio-lista">
+        <li>✅ Precio accesible</li>
+        <li>✅ Entrega en 30 días</li>
+        <li>✅ Escala del 1 al 10</li>
+        <li>✅ Buena reputación en el mercado</li>
+      </ul>
+      <div class="servicio-precio">Desde S/ 80 por carta</div>
+      <a href="#contacto" class="btn">Solicitar →</a>
+    </div>
+
+  </div>
+
+  <!-- PROCESO -->
+  <div class="proceso">
+    <h3>¿Cómo funciona?</h3>
+    <div class="pasos">
+      <div class="paso">
+        <div class="paso-num">1</div>
+        <p>Nos traes tu carta o la envías por courier</p>
+      </div>
+      <div class="paso-flecha">→</div>
+      <div class="paso">
+        <div class="paso-num">2</div>
+        <p>La enviamos al servicio que elijas</p>
+      </div>
+      <div class="paso-flecha">→</div>
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <p>Te avisamos cuando llega el resultado</p>
+      </div>
+      <div class="paso-flecha">→</div>
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <p>Recoge tu carta gradeada y sellada</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <div class="info-box" id="contacto">
+    <h3>📩 Contáctanos</h3>
+    <p>Escríbenos por WhatsApp o Instagram para coordinar el envío de tus cartas.</p>
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="#" class="btn">WhatsApp</a>
+      <a href="#" class="btn" style="background:#833ab4; color:#fff;">Instagram</a>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}
